@@ -17,7 +17,7 @@ const connect = function() {
     console.log('Successfully connected to game server');
     
     conn.write(`Name: SAM`)
-  })
+  });
 
   conn.on('data', function(data){
     console.log(data);
@@ -25,9 +25,6 @@ const connect = function() {
 
 
   return conn;
-
 };
 
-module.exports = {
-  connect
-};
+module.exports = { connect };
